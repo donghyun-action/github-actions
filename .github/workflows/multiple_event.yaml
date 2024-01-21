@@ -1,0 +1,17 @@
+name: multiple-event-workflow
+on:
+  push:
+  issues:
+    types: [opened]
+  workflow-dispatch:
+
+  jobs:
+    mulitple-event-jobs:
+      runs-on: ubuntu-latest
+      steps:
+        - name: step 1
+          run: echo hello world
+        - name: step 2
+          run: |
+            echo hello world
+            echo github action
