@@ -35,3 +35,8 @@ jobs:
         run: echo "level=job" >> $GITHUB_ENV
       - name: check env
         run: echo "LEVEL ${{ env.level }}"
+  get-env-already:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get var
+        run: echo ${{ vars.level}}
